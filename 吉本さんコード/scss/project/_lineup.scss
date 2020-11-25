@@ -1,0 +1,57 @@
+.lineup {
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  &_inner {
+    @include _inner;
+  }
+  &_items {
+  }
+  &_item {
+    @include _animate;
+    // @include _inner;
+  }
+}
+//SP
+@media screen and (max-width: #{nth($breakPointList, 1)}) {
+  .lineup {
+    overflow: hidden;
+    padding-bottom: _vw(80 - 38);
+    background-position: 0 _vw(690);
+    background-image: url("#{$imgDir}bg_e_sp.png");
+    &_inner {
+    }
+    &_items {
+      margin-top: _vw(72);
+    }
+    &_item {
+      & + & {
+        margin-top: _vw(73);
+      }
+    }
+  }
+}
+//PC
+@media print,screen and (min-width: #{nth($breakPointList, 2)}) {
+  .lineup {
+    padding-top: 244px;
+    // padding-bottom: 115px;
+    padding-bottom: 72px;
+    background-position: 50% 440px;
+    background-image: url("#{$imgDir}bg_e_pc.png");
+    &_inner {
+    }
+    &_items {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-top: 78px;
+    }
+    &_item {
+      @include _inner;
+      margin-top: 220px;
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+}

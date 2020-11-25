@@ -1,0 +1,15 @@
+.wrap {
+}
+//SP
+@media screen and (max-width: #{nth($breakPointList, 1)}) {
+  .wrap {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+  }
+}
+//PC
+@media print,screen and (min-width: #{nth($breakPointList, 2)}) {
+  .wrap {
+  }
+}

@@ -1,0 +1,95 @@
+.pager {
+  $this: &;
+  position: absolute;
+  z-index: 10001;
+  span {
+    display: inline-block;
+    position: relative;
+    color: #00001f;
+    @include _bold;
+    line-height: 0;
+  }
+  &_current {
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      background-color: #00001f;
+      transform: rotate(45deg);
+    }
+  }
+  &_total {
+  }
+}
+
+//SP
+@media screen and (max-width: #{nth($breakPointList, 1)}) {
+  .pager {
+    $this: &;
+    opacity: 0;
+    span {
+      font-size: _vw(22);
+    }
+    &_current {
+      &:before {
+        top: _vw(-17);
+        left: _vw(40);
+        width: _vw(2);
+        height: _vw(49);
+      }
+    }
+    &_total {
+      top: _vw(16);
+      left: _vw(22);
+    }
+    &._kv {
+      bottom: _vw(55);
+      right: _vw(236);
+    }
+    &._popup {
+      opacity: 1;
+      top: _vw(49);
+      right: _vw(143);
+      span {
+        font-size: _vw(26);
+      }
+      #{$this}_current {
+        &:before {
+          top: _vw(-10);
+        }
+      }
+      #{$this}_total {
+        top: _vw(24);
+      }
+    }
+  }
+}
+//PC
+@media print,screen and (min-width: #{nth($breakPointList, 2)}) {
+  .pager {
+    $this: &;
+    span {
+      font-size: _s(22);
+    }
+    &_current {
+      &:before {
+        top: -17px;
+        left: 40px;
+        width: 1px;
+        height: 49px;
+      }
+    }
+    &_total {
+      top: 16px;
+      left: 22px;
+    }
+    &._kv {
+      bottom: 120px;
+      left: 60px;
+    }
+    &._popup {
+      bottom: 105px;
+      right: 66px;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+.list {
+  $this: &;
+  // &._item {
+  //   #{$this}_item {
+  //   }
+  //   #{$this}_pic {
+  //     figcaption {
+  //       letter-spacing: 1.08px;
+  //       line-height: 1.25;
+  //       text-align: center;
+  //     }
+  //   }
+  // }
+}
+
+//SP
+@media screen and (max-width: #{nth($breakPointList, 1)}) {
+  .list {
+    $this: &;
+    // &._item {
+    // }
+  }
+}
+//PC
+@media print,screen and (min-width: #{nth($breakPointList, 2)}) {
+  .list {
+    $this: &;
+    // &._item {
+    //   display: flex;
+    //   #{$this}_item {
+    //   }
+    //   #{$this}_pic {
+    //     figcaption {
+    //       font-size: _s(12);
+    //     }
+    //   }
+    // }
+  }
+}

@@ -1,0 +1,222 @@
+.gnav {
+  &_logo {
+    display: none;
+  }
+  &_list {
+  }
+  &_item {
+    a {
+      display: block;
+      position: relative;
+      @include _bold;
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        background-position: 0 0;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url('#{$imgDir}icon_arr.png');
+        transform: translateY(-50%);
+      }
+    }
+    &._top {
+      display: none;
+    }
+  }
+}
+//SP
+@media screen and (max-width: #{nth($breakPointList, 1)}) {
+  .gnav {
+    $this: &;
+    display: flex;
+    // overflow: hidden;
+    // position: absolute;
+    position: fixed;
+    top: 0;
+    z-index: 100000;
+    @include _transition;
+    &_inner {
+    }
+    &_list {
+      position: relative;
+      left: _vw(0);
+      width: _vw(300);
+      height: _vw(440);
+      padding: _vw(15) 0;
+      background-color: $color-main;
+    }
+    &_item {
+      a {
+        display: block;
+        padding: _vw(27) _vw(60);
+        color: #fff;
+        font-size: _vw(26);
+        &:before {
+          left: _vw(38);
+          width: _vw(7);
+          height: _vw(10);
+          background-image: url('#{$imgDir}icon_arr_sp.png');
+        }
+      }
+      &._top {
+        display: block;
+      }
+    }
+    &_btn {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: _vw(-80);
+      width: _vw(80);
+      height: _vw(80);
+      background-color: $color-main;
+      &:before,
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: _vw(36);
+        height: _vw(4);
+        background-color: #fff;
+        @include _transition;
+      }
+    }
+    &._close-sp {
+      right: _vw(-300);
+      #{$this}_btn {
+        &:before {
+          top: _vw(30);
+          left: _vw(22);
+        }
+        &:after {
+          top: _vw(46);
+          left: _vw(22);
+        }
+      }
+    }
+    &._open-sp {
+      right: _vw(0);
+      #{$this}_btn {
+        &:before,
+        &:after {
+          top: _vw(38);
+          left: _vw(22);
+        }
+        &:before {
+          transform: rotate(45deg);
+        }
+        &:after {
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+}
+//PC
+@media print,screen and (min-width: #{nth($breakPointList, 2)}) {
+  .gnav {
+    $this: &;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #f5f5f5;
+    z-index: 10;
+    &_logo {
+      width: 101px;
+      height: 28px;
+    }
+    &_list {
+      display: flex;
+      justify-content: center;
+    }
+    &_item {
+      & + & {
+        margin-left: 74px;
+      }
+      a {
+        padding-left: 18px;
+        font-size: _s(16);
+        &:before {
+          width: 10px;
+          height: 7px;
+          margin-top: 2px;
+        }
+      }
+    }
+    &_btn {
+      display: none;
+    }
+    &._relative {
+      position: relative;
+      top: 0;
+      #{$this}_item {
+        &._top + #{$this}_item {
+          margin-left: 0;
+        }
+      }
+    }
+    &._fixed {
+      // position: fixed;
+      top: -60px;
+      background-color: $color-main;
+      @include _transition;
+      opacity: 0;
+      z-index: 30000;
+      #{$this}_logo {
+        display: block;
+        position: absolute;
+        top: 12px;
+        left: 24px;
+      }
+      #{$this}_inner {
+        margin: 0 0 0 auto;
+        padding-right: 46px;
+      }
+      #{$this}_list {
+      }
+      #{$this}_item {
+        a {
+          color: #fff;
+          &:before {
+            background-image: url('#{$imgDir}icon_arr_w.png');
+          }
+        }
+        &._top {
+          display: block;
+        }
+      }
+      &._open {
+        position: fixed;
+        top: 0;
+        opacity: 1;
+        & + main {
+          padding-top: 60px;
+        }
+      }
+    }
+  }
+}
+
+// hover
+@mixin _hoverGnav {
+  .gnav {
+    &_item {
+      a {
+        @include _hover('opacity');
+      }
+    }
+  }
+}
+@media (hover: hover) {
+  @include _hoverGnav;
+}
+.ie11 {
+  @include _hoverGnav;
+}

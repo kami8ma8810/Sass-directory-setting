@@ -1,0 +1,67 @@
+.kv {
+  position: relative;
+  &_list {
+    @include _slide('kv');
+  }
+  &_item {
+  }
+  &_pager {
+  }
+  &_pic {
+    position: relative;
+  }
+  &_copy {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    img {
+      height: auto !important;
+    }
+  }
+  &_cover {
+    display: block;
+    position: relative;
+    z-index: 1;
+    img {
+      height: auto !important;
+    }
+  }
+}
+//SP
+@media screen and (max-width: #{nth($breakPointList, 1)}) {
+  .kv {
+    &_list {
+    }
+    &_item {
+    }
+    &_pager {
+    }
+    &_pic {
+    }
+    &_copy {
+    }
+    &_cover {
+    }
+  }
+}
+//PC
+@media print,screen and (min-width: #{nth($breakPointList, 2)}) {
+  .kv {
+    height: auto !important;
+    &_list {
+    }
+    &_item {
+    }
+    &_pager {
+    }
+    &_pic {
+    }
+    &_copy {
+    }
+    &_cover {
+    }
+  }
+}

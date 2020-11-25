@@ -1,0 +1,43 @@
+<script>
+  (function () {
+
+   const _menuButton = document.getElementById('js-menu-button') // add
+   const _cartButton = document.getElementById('js-header-cart--mobile') // add
+   const _headerViewCart = document.getElementById('js-header-view-cart') // add
+
+   const $searchMenuButton = document.querySelector('.js-searchMenu-button');
+   const $jsHeader = document.getElementById('js-header');
+   const $navBtn = document.getElementById('js-searchMenu-button');
+
+   $searchMenuButton.addEventListener('click', function () {
+     if (_menuButton.classList.contains('is-active')) _menuButton.click()  // add
+     if (_headerViewCart.classList.contains('is-active')) _headerViewCart.classList.remove('is-active');  // add
+     $searchMenuButton.classList.toggle('is-active')
+   });
+
+    // add
+   _menuButton.addEventListener('click', function () {
+     if ($searchMenuButton.classList.contains('is-active')) $searchMenuButton.click()
+   });
+
+    // add
+   _cartButton.addEventListener('click', function () {
+     if ($searchMenuButton.classList.contains('is-active')) $searchMenuButton.click()
+   });
+
+   $navBtn.addEventListener('click', navToggle);
+   function navToggle() {
+     if ($jsHeader.classList.contains('nav-open')) {
+       navCloseFunc();
+     } else {
+       navOpenFunc();
+     }
+   }
+   function navOpenFunc() {
+     $jsHeader.classList.add('nav-open');
+   }
+   function navCloseFunc() {
+     $jsHeader.classList.remove('nav-open');
+   }
+ })();
+</script>

@@ -1,0 +1,361 @@
+@font-face {
+  font-family: HiraginoCustom;
+  font-weight: 100;
+  src: local('HiraginoSans-W1'), local('Hiragino Sans');
+}
+@font-face {
+  font-family: HiraginoCustom;
+  font-weight: 200;
+  src: local('HiraginoSans-W2'), local('Hiragino Sans');
+}
+@font-face {
+  font-family: HiraginoCustom;
+  font-weight: 300;
+  src: local('HiraginoSans-W3'), local('Hiragino Sans');
+}
+@font-face {
+  font-family: HiraginoCustom;
+  font-weight: 400;
+  src: local('HiraginoSans-W3'), local('Hiragino Sans');
+}
+@font-face {
+  font-family: HiraginoCustom;
+  font-weight: 500;
+  src: local('HiraginoSans-W5'), local('Hiragino Sans');
+}
+@font-face {
+  font-family: HiraginoCustom;
+  font-weight: 600;
+  src: local('HiraginoSans-W6'), local('Hiragino Sans');
+}
+@font-face {
+  font-family: HiraginoCustom;
+  font-weight: 700;
+  src: local('HiraginoSans-W6'), local('Hiragino Sans');
+}
+@font-face {
+  font-family: HiraginoCustom;
+  font-weight: 800;
+  src: local('HiraginoSans-W7'), local('Hiragino Sans');
+}
+@font-face {
+  font-family: HiraginoCustom;
+  font-weight: 900;
+  src: local('HiraginoSans-W8'), local('Hiragino Sans');
+}
+#globalFooter {
+  width: 100%;
+  background-color: #001e5a;
+  line-height: 1.15;
+  // font-feature-settings: 'palt';
+  p,
+  span {
+    font-feature-settings: 'palt';
+  }
+}
+#globalFotter_nav {
+}
+.navItems {
+  li {
+    a {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      padding: 1em;
+      color: #fff;
+      font-weight: 400;
+    }
+  }
+}
+.contactInformation {
+}
+.contactInformation_name {
+}
+.contactInformation_sns {
+  a {
+    position: relative;
+    span {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+.copyright {
+  color: #fff;
+  text-align: center;
+}
+#footerLogo-long {
+}
+.contactInformation_snsLabel {
+  color: #fff;
+  text-align: center;
+}
+.officialFBLink {
+}
+.officialYTLink {
+}
+.iconFB-nega {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  overflow: visible;
+  span {
+    background: url(/new_assets/images/common/icon_fb_nega.svg) 50% 50% no-repeat;
+    background-size: contain;
+    display: block;
+    width: 100.67114% !important;
+    height: 100% !important;
+  }
+}
+.iconYT-nega {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  overflow: visible;
+  span {
+    background: url(/new_assets/images/common/icon_yt_nega.svg) 50% 50% no-repeat;
+    background-size: contain;
+    display: block;
+    width: 115.83012% !important;
+    height: 100% !important;
+    margin-left: -3.125%;
+  }
+}
+//SP
+@media screen and (max-width: #{nth($breakPointList, 1)}) {
+  #globalFooter {
+    font-size: 76.8%;
+    font-family: -apple-system, BlinkMacSystemFont, HiraKakuProN-W3, 'Noto Sans JP', sans-serif;
+    width: 100%;
+    padding-bottom: 6.66667vw;
+    background-color: #001e5a;
+  }
+  #globalFotter_nav {
+  }
+  .navItems {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    flex-wrap: wrap;
+    text-align: center;
+    li {
+      width: 50%;
+      height: 16vw;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      line-height: 1.33333;
+      &:nth-of-type(2n) {
+        border-left: 1px solid rgba(255, 255, 255, 0.2);
+      }
+      &:last-of-type:not(:nth-of-type(2n)) {
+        width: 100%;
+      }
+      a {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        padding: 1em;
+        color: #fff;
+        font-weight: 400;
+        font-size: 2.4em;
+        &:after {
+          content: ' ';
+          position: absolute;
+          top: 50%;
+          right: 1em;
+          display: block;
+          width: 1em;
+          height: 1em;
+          margin-top: -0.5em;
+          background: url(/new_assets/images/common/icon_arrow_right_nega.svg) 50% 50% no-repeat;
+          background-size: contain;
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+  .contactInformation {
+    margin-top: 10.66667vw;
+    margin-bottom: 10.66667vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+    padding: 0 5.33333vw;
+  }
+  .contactInformation_name {
+    width: 100%;
+    margin-bottom: 1em;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    text-align: center;
+    font-size: 2.8em;
+  }
+  .contactInformation_sns {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 60%;
+    margin: 0 auto;
+  }
+  .copyright {
+    font-size: 2.4em;
+  }
+  #footerLogo-long {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 5%;
+  }
+  .contactInformation_snsLabel {
+    color: #fff;
+    text-align: center;
+    font-size: 2.8em;
+  }
+  .officialFBLink {
+    width: 8.8vw;
+    height: 8.8vw;
+  }
+  .officialYTLink {
+    width: 8.8vw;
+    height: 8.8vw;
+  }
+  .iconFB-nega {
+  }
+  .iconYT-nega {
+  }
+}
+//PC
+@media print,screen and (min-width: #{nth($breakPointList, 2)}) {
+  #globalFooter {
+    // font-size: 1.4rem;
+    font-family: HiraginoCustom, 'ヒラギノ角ゴ ProN W3', HiraKakuProN-W3, 'ヒラギノ角ゴ Pro W3', HiraKakuPro-W3, 'Noto Sans JP', helvetica, arial, sans-serif;
+    font-size: 0.92937vw;
+    padding: 1.62037vw;
+  }
+  #globalFotter_nav {
+    font-size: 1.3rem;
+    // font-size: 1.3em;
+  }
+  .navItems {
+    display: block;
+    justify-content: space-around;
+    align-items: stretch;
+    flex-wrap: wrap;
+    text-align: center;
+    li {
+      position: relative;
+      display: inline-block;
+      width: auto;
+      height: auto;
+      line-height: 1.38462;
+      white-space: nowrap;
+      border: none !important;
+      &:not(:nth-of-type(1)):before {
+        content: ' ';
+        position: absolute;
+        top: 50%;
+        left: -1px;
+        display: block;
+        width: 1px;
+        height: 1em;
+        margin-top: -0.55em;
+        background-color: #fff;
+      }
+      a {
+        line-height: 1.38462;
+        white-space: nowrap;
+      }
+    }
+  }
+  .-sp:not(.-pc) {
+    display: none !important;
+  }
+  .contactInformation {
+    margin-top: 3.24074vw;
+    margin-bottom: 3.24074vw;
+    width: 75.65056vw;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    margin-right: auto;
+    margin-left: auto;
+    flex-wrap: nowrap;
+  }
+  .contactInformation_name {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 39.55774%;
+    margin-bottom: 0;
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: none;
+    text-align: left;
+    font-size: 1.4rem;
+    // font-size: 1.4em;
+  }
+  .contactInformation_sns {
+    width: 14.12776%;
+    padding-left: 2.7881vw;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .copyright {
+    font-size: 1.2rem;
+    // font-size: 1.2em;
+  }
+  #footerLogo-long {
+    display: block;
+    padding-right: 10%;
+    padding-bottom: 0;
+    // width: 90%;
+    // margin: 0 auto;
+    line-height: 1.15;
+  }
+  .contactInformation_snsLabel {
+    width: 100%;
+    margin-bottom: 0.8em;
+    font-size: 1.4rem;
+    // font-size: 1.4em;
+  }
+  .officialFBLink {
+    width: 34.73684%;
+    height: 0;
+    padding-top: 34.73684%;
+  }
+  .officialYTLink {
+    width: 34.73684%;
+    height: 0;
+    padding-top: 34.73684%;
+  }
+  .iconFB-nega {
+  }
+  .iconYT-nega {
+  }
+}
+
+@media print, screen and (min-width: 1076px) {
+  #globalFooter .contactInformation {
+    width: 814px;
+  }
+  .contactInformation .contactInformation_sns {
+    width: 115px;
+    padding-left: 30px;
+  }
+}

@@ -1,0 +1,120 @@
+.img {
+  $this: &;
+  &._item-pic0 {
+  }
+  &._item-pic1 {
+  }
+  &._item-pic2 {
+  }
+  &._item-pic3 {
+  }
+  &._item-pic4 {
+  }
+  &._item-pic5 {
+  }
+  &._item-pic6 {
+  }
+  &._item-pic7 {
+  }
+  &._item-pic8 {
+  }
+  &._item-pic9 {
+  }
+  &._item-pic10 {
+  }
+  &._item-pic11 {
+  }
+}
+//SP
+@media screen and (max-width: #{nth($breakPointList, 1)}) {
+  .img {
+    $this: &;
+    &._item-pic0 {
+      width: 0px;
+      height: 0px;
+    }
+    &._item-pic1 {
+      width: 0px;
+      height: 0px;
+    }
+    &._item-pic2 {
+      width: 0px;
+      height: 0px;
+    }
+    &._item-pic3 {
+      width: 0px;
+      height: 0px;
+    }
+    &._item-pic4 {
+      width: 0px;
+      height: 0px;
+    }
+    &._item-pic5 {
+      width: 0px;
+      height: 0px;
+    }
+    &._item-pic6 {
+      width: 0px;
+      height: 0px;
+    }
+    &._item-pic7 {
+      width: 0px;
+      height: 0px;
+    }
+    &._item-pic8 {
+      width: 0px;
+      height: 0px;
+    }
+    &._item-pic9 {
+      width: 0px;
+      height: 0px;
+    }
+    &._item-pic10 {
+      width: 0px;
+      height: 0px;
+    }
+    &._item-pic11 {
+      width: 0px;
+      height: 0px;
+    }
+  }
+}
+//PC
+@media print,screen and (min-width: #{nth($breakPointList, 2)}) {
+  .img {
+    $this: &;
+    // &._item-pic0 {
+    //   width: 124px;
+    //   height: 470px;
+    // }
+    // &._item-pic1,
+    // &._item-pic2,
+    // &._item-pic3,
+    // &._item-pic4,
+    // &._item-pic5,
+    // &._item-pic6 {
+    //   width: 158px;
+    //   height: 390px;
+    // }
+    // &._item-pic7 {
+    //   width: 134px;
+    //   height: 479px;
+    // }
+    // &._item-pic8 {
+    //   width: 137px;
+    //   height: 415px;
+    // }
+    // &._item-pic9 {
+    //   width: 163px;
+    //   height: 434px;
+    // }
+    // &._item-pic10 {
+    //   width: 163px;
+    //   height: 435px;
+    // }
+    // &._item-pic11 {
+    //   width: 337px;
+    //   height: 284px;
+    // }
+  }
+}

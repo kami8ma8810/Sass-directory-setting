@@ -1,0 +1,5 @@
+@mixin _mq($value){
+	@media #{map-get($mq, $value)}{
+		@content;
+	}
+}

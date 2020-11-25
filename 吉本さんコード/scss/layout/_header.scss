@@ -1,0 +1,49 @@
+.header {
+  position: relative;
+  &_logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: contain;
+    z-index: 10000;
+    a {
+      display: block;
+      position: relative;
+    }
+  }
+}
+//SP
+@media screen and (max-width: #{nth($breakPointList, 1)}) {
+  .header {
+    overflow: hidden;
+    &_logo {
+      width: _vw(294);
+      height: _vw(382);
+      background-image: url('#{$imgDir}logo_bg_sp.png');
+      a {
+        top: _vw(29);
+        left: _vw(29);
+        width: _vw(119);
+        height: _vw(32);
+      }
+    }
+  }
+}
+//PC
+@media print,screen and (min-width: #{nth($breakPointList, 2)}) {
+  .header {
+    &_logo {
+      width: 464px;
+      height: 383px;
+      background-image: url('#{$imgDir}logo_bg_pc.png');
+      a {
+        top: 30px;
+        left: 30px;
+        width: 119px;
+        height: 32px;
+      }
+    }
+  }
+}

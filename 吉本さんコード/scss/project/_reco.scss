@@ -1,0 +1,54 @@
+.reco {
+  margin: 0 auto;
+  &_title {
+    color: $color-main;
+    @include _bold;
+  }
+  &_link {
+    display: block;
+    width: 100%;
+  }
+}
+//SP
+@media screen and (max-width: #{nth($breakPointList, 1)}) {
+  .reco {
+    width: _vw(670);
+    padding-top: _vw(66);
+    padding-bottom: _vw(120);
+    &_title {
+      font-size: _vw(26);
+    }
+    &_link {
+      margin-top: _vw(30);
+    }
+  }
+}
+//PC
+@media print,screen and (min-width: #{nth($breakPointList, 2)}) {
+  .reco {
+    width: 570px;
+    padding-top: 51px;
+    padding-bottom: 80px;
+    &_title {
+      font-size: _s(20);
+    }
+    &_link {
+      margin-top: 16px;
+    }
+  }
+}
+
+// hover
+@mixin _hoverRecoLink {
+  .reco {
+    &_link {
+      @include _hover("opacity");
+    }
+  }
+}
+@media (hover: hover) {
+  @include _hoverRecoLink;
+}
+.ie11 {
+  @include _hoverRecoLink;
+}

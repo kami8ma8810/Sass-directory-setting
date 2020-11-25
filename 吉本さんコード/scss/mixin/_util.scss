@@ -1,0 +1,35 @@
+@import "./mq";
+
+@mixin _inner {
+  @include _mq("sp") {
+    padding-right: _vw(40);
+    padding-left: _vw(40);
+  }
+  @include _mq("pc") {
+    width: $minContentWidth;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@mixin _fitH($height) {
+  width: 100%;
+  height: $height;
+  object-fit: cover;
+  font-family: "object-fit: cover";
+}
+
+$initProperty: all;
+@mixin _transition($property: $initProperty) {
+  transition: $property 0.3s;
+}
+
+@mixin _hover($type) {
+  @include _transition;
+  @if ($type == "opacity") {
+    opacity: 1;
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}

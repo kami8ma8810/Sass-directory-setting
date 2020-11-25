@@ -1,0 +1,32 @@
+@charset 'utf-8';
+
+$breakPointList: 750px, 751px, 1600px;
+// $breakPointList: 749px, 750px, 1600px;
+// $breakPointList: 767px, 768px, 959px, 960px, 1023px, 1024px, 1279px, 1280px, 1600px;
+
+$rootDir: '/promotion/special_sites/drgrip_ace/';
+$imgDir: $rootDir + 'img/';
+$fontDir: $rootDir + 'fonts/';
+
+$mq: (
+  'sp': 'screen and (max-width: #{nth($breakPointList, 1)})',
+  'pc': 'print,screen and (min-width: #{nth($breakPointList, 2)})',
+  'pc-max': 'print,screen and (min-width: #{nth($breakPointList, 3)})'
+) !default;
+
+//
+// content width
+//
+$minContentWidth: 970px;
+$maxContentWidth: 1280px;
+
+//
+// color
+//
+$color-default: #333;
+$color-main: #e60039;
+$color-main-text: #3e3e3e;
+$color-em: #333;
+$color-link: #e60039;
+
+$color-green: #bfd500;

@@ -1,0 +1,27 @@
+.main {
+  &_bg {
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+  }
+}
+//SP
+@media screen and (max-width: #{nth($breakPointList, 1)}) {
+  .main {
+    // overflow: hidden;
+    width: 100%;
+    &_bg {
+      background-position: 0 _vw(124);
+      background-image: url('#{$imgDir}bg_a_sp.png');
+    }
+  }
+}
+//PC
+@media print,screen and (min-width: #{nth($breakPointList, 2)}) {
+  .main {
+    &_bg {
+      background-position: 100% 0;
+      background-image: url('#{$imgDir}bg_a_pc.png');
+    }
+  }
+}

@@ -1,0 +1,236 @@
+.item {
+  $this: &;
+  &_pic {
+    figcaption {
+      display: flex;
+      span {
+        // letter-spacing: 1.08px;
+        line-height: 1.25;
+        text-align: center;
+      }
+    }
+  }
+  &_cover {
+    display: block;
+    position: relative;
+  }
+  &_content {
+  }
+  &_heading {
+    color: #00001f;
+    @include _bold;
+    line-height: 1.3;
+  }
+  &_tip {
+    display: block;
+    // letter-spacing: 1.7px;
+    // &._red {
+    //   background-color: $color-main;
+    //   color: #fff;
+    // }
+    // &._green {
+    //   background-color: $color-green;
+    //   color: #00001f;
+    // }
+  }
+  &_dlist {
+    display: flex;
+    line-height: 2;
+  }
+  &_term {
+    @include _bold;
+  }
+  &_des {
+    flex: 1;
+    @include _regular;
+    dl {
+      display: flex;
+    }
+    dt {
+      &:after {
+        content: '：';
+      }
+    }
+    dd {
+    }
+  }
+  &_note {
+    letter-spacing: 1.08px;
+  }
+}
+//SP
+@media screen and (max-width: #{nth($breakPointList, 1)}) {
+  .item {
+    $this: &;
+    &_pic {
+      margin: 0 auto;
+      text-align: center;
+      figcaption {
+        justify-content: center;
+        span {
+          font-size: _vw(14);
+        }
+      }
+    }
+    &_content {
+      margin-top: _vw(62);
+      @include _inner;
+    }
+    &_heading {
+      margin-bottom: _vw(52);
+      font-size: _vw(36);
+    }
+    &_tip {
+      margin-bottom: _vw(18);
+      img {
+        width: auto;
+        height: _vw(43);
+      }
+    }
+    &_dlist {
+      font-size: _vw(26);
+    }
+    &_term {
+      width: _vw(180);
+    }
+    &_des {
+      dl {
+      }
+      dt {
+      }
+      dd {
+      }
+    }
+    &_note {
+      font-size: _vw(26);
+    }
+    &._i0 {
+      #{$this}_pic {
+        width: _vw(742);
+        figcaption {
+          span {
+            width: _vw(114);
+            padding: 0 _vw(4);
+          }
+        }
+      }
+    }
+    &._i1 {
+      #{$this}_pic {
+        width: _vw(519);
+        figcaption {
+          margin-top: _vw(-27);
+          margin-left: _vw(-38);
+          span {
+            width: _vw(168);
+          }
+        }
+      }
+    }
+    &._i2 {
+      #{$this}_pic {
+        width: _vw(406);
+      }
+    }
+    &_note {
+      margin-top: _vw(14);
+      margin-left: _vw(20);
+      font-size: _vw(20);
+      text-indent: _vw(-20);
+    }
+  }
+}
+//PC
+@media print,screen and (min-width: #{nth($breakPointList, 2)}) {
+  .item {
+    $this: &;
+    display: flex;
+    &_pic {
+      figcaption {
+        span {
+          width: 90px;
+          font-size: _s(12);
+        }
+      }
+    }
+    &_content {
+    }
+    &_tip {
+      margin-bottom: 29px;
+      img {
+        // width: 78px;
+        width: auto;
+        height: 27px;
+      }
+    }
+    &_heading {
+      margin-bottom: 26px;
+      font-size: _s(24);
+    }
+    &_dlist {
+      font-size: _s(14);
+    }
+    &_term {
+      width: 105px;
+    }
+    &_des {
+      flex: 1;
+      min-width: 186px;
+      dl {
+      }
+      dt {
+        min-width: 42px;
+      }
+      dd {
+        flex: 1;
+      }
+    }
+    &._i0 {
+      #{$this}_pic {
+        width: 634px;
+        figcaption {
+          padding: 0 20px;
+          span {
+            margin: 0 4px;
+          }
+        }
+      }
+      #{$this}_content {
+        padding-left: 50px;
+      }
+    }
+    &._i1 {
+      padding: 0 100px;
+      #{$this}_pic {
+        width: 425px;
+        figcaption {
+          margin-top: -21px;
+          margin-left: -10px;
+          span {
+            margin: 0 23px;
+          }
+        }
+      }
+      #{$this}_content {
+        padding-left: 66px;
+      }
+    }
+    &._i2 {
+      padding: 0 100px;
+      #{$this}_pic {
+        width: 337px;
+      }
+      #{$this}_content {
+        flex: 1;
+        padding-top: 20px;
+        padding-left: 160px;
+      }
+    }
+    &_note {
+      margin-top: 38px;
+      margin-left: 12px;
+      font-size: _s(12);
+      text-indent: -12px;
+    }
+  }
+}
